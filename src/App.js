@@ -1,5 +1,8 @@
 import './App.css';
 import React, { Component, Fragment } from 'react'
+import Cookies from 'universal-cookie';
+
+const cookies = new Cookies();
 
 const Header = () => {
   return <h1>POPCLICK</h1>
@@ -7,20 +10,21 @@ const Header = () => {
 
 class Counter extends Component {
   state = {
-    count : 0
+    count : parseInt(cookies.get('count')) || 0
   }
   
   popOut = () => {
-    const element = document.getElementById('counter');
-    element.classList.remove('popout'); // reset animation
-    void element.offsetWidth; // trigger reflow
-    element.classList.add('popout'); // start animation
+    const element = document.getElementById('counter')
+    element.classList.remove('popout')
+    void element.offsetWidth
+    element.classList.add('popout')
   }
   
   handleClick = () => {
     this.setState({
       count: this.state.count + 1
     })
+    cookies.set('count', parseInt(this.state.count), { path: '/' })
     this.popOut()
   }
   
@@ -55,4 +59,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
