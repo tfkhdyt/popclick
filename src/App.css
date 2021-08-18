@@ -38,9 +38,9 @@
 }
 
 .popout{
-  animation: popout 0.2s linear 1;
+  animation: popout 0.1s linear 1;
 }
 
 @keyframes popout{
-  50%  {transform: scale(2.0);}
+  50%  {transform: scale(1.5);}
 }

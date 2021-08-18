@@ -39,7 +39,7 @@ class Counter extends Component {
   
   render () {
     return (
-      <h2 id="counter">{this.state.count}</h2>
+      <h2 id="counter" style={{marginTop:'-15px'}}>{this.state.count}</h2>
     )
   }
 }
@@ -49,7 +49,7 @@ function App() {
     <Fragment>
       <div className="container">
         <div className="row text-center">
-          <div className="col-12 col-md-8 mt-5 mx-auto">
+          <div className="col-12 col-md-8 mt-4 mx-auto">
             <Header />
             <Counter />
           </div>
