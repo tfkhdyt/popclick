@@ -41,9 +41,9 @@ class Counter extends Component {
   
   componentDidMount(){
     window.addEventListener('mousedown', this.handleClick)
-    document.body.onkeyup = function(e){
-      if(e.keyCode === 32){
-        this.handleClick()
+    window.onkeypress = function(event) {
+      if (event.which == 32) {
+        this.handleClick();
       }
     }
   }
@@ -81,11 +81,9 @@ class Gambar extends Component {
         pic: this.gambarWah
       })
     });
-    document.body.onkeyup = function(e){
-      if(e.keyCode === 32){
-        this.setState({
-          pic: this.gambarWah
-        })
+    window.onkeypress = function(event) {
+      if (event.which == 32) {
+        this.handleClick();
       }
     }
   }
