@@ -2,8 +2,8 @@ import audio from './kaget.wav';
 import './App.css';
 import React, { Component, Fragment } from 'react';
 import Cookies from 'universal-cookie';
-import wah from './img/wah.png';
-import u from './img/u.png';
+// import wah from './img/wah.png';
+// import u from './img/u.png';
  
 const cookies = new Cookies();
 
