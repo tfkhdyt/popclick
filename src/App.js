@@ -70,24 +70,31 @@ class App extends Component{
     pic : u
   }
   
-  handleEvent = () => {
+  handleU = () => {
     this.setState({
       pic: wah
     })
-    setTimeout(() => {
-      this.setState({
-        pic: u
-      })
-    }, 200)
+  }
+  
+  handleWah = () => {
+    this.setState({
+      pic: u
+    })
   }
   
   componentDidMount(){
     window.addEventListener('mousedown', () => {
-      this.handleEvent();
+      this.handleU();
+      setTimeout(() => {
+        this.handleWah();
+      }, 200)
     })
     window.onkeyup = function(e){
       if(e.keyCode === 32){
-        this.handleEvent()
+        this.handleU();
+        setTimeout(() => {
+          this.handleWah();
+        }, 200)
       }
     }
   }
