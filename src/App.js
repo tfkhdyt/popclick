@@ -1,9 +1,9 @@
-import audio from './kaget.wav'
-import wah from './img/wah.png'
-import u from './img/u.png'
+import audio from './kaget.wav';
 import './App.css';
-import React, { Component, Fragment } from 'react'
+import React, { Component, Fragment } from 'react';
 import Cookies from 'universal-cookie';
+import wah from './img/wah.png';
+import u from './img/u.png';
  
 const cookies = new Cookies();
 
@@ -56,15 +56,17 @@ class Counter extends Component {
 }
 
 class Gambar extends Component {
+  gambarU = u
+  gambarWah = wah
   state = {
-    pic : u
+    pic : this.gambarU
   }
   
-  handleU = () => {
-    this.setState({
-      pic: wah
-    })
-  }
+  // handleU = () => {
+  //   this.setState({
+  //     pic: this.gambarWah
+  //   })
+  // }
   
   // handleWah = () => {
   //   this.setState({
@@ -73,20 +75,26 @@ class Gambar extends Component {
   // }
   
   componentDidMount(){
-    window.addEventListener('mousedown', this.handleU)
+    window.addEventListener('mousedown', () => {
+      this.setState({
+        pic: this.gambarWah
+      })
+    });
     document.body.onkeyup = function(e){
       if(e.keyCode === 32){
-        this.handleU();
+        this.setState({
+          pic: this.gambarWah
+        })
       }
     }
   }
   
   componentDidUpdate(prevProps, prevState) {
-    if (this.state.pic === wah) {
+    if (this.state.pic === this.gambarWah) {
       this.balikKeAwal = setTimeout(() => { 
-        this.setState(() => ({pic: u}))
+        this.setState(() => ({pic: this.gambarU}))
         console.log('uwah')
-      }, 400);
+      }, 200);
     }
   }
   
