@@ -56,8 +56,8 @@ class Counter extends Component {
 }
 
 class Gambar extends Component {
-  gambarU = <img src={u} className="fixed-bottom mx-auto" alt="" id="img" height="55%"/>
-  gambarWah = <img src={wah} className="fixed-bottom mx-auto" alt="" id="img" height="55%"/>
+  gambarU = <img src="https://i.postimg.cc/JhTM6rh9/u.png" className="fixed-bottom mx-auto" alt="" id="img" height="55%"/>
+  gambarWah = <img src="https://i.postimg.cc/CL4tHv52/wah.png" className="fixed-bottom mx-auto" alt="" id="img" height="55%"/>
   
   state = {
     pic : this.gambarU
