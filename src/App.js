@@ -56,8 +56,9 @@ class Counter extends Component {
 }
 
 class Gambar extends Component {
-  gambarU = u
-  gambarWah = wah
+  gambarU = <img src={u} className="fixed-bottom mx-auto" alt="" id="img" height="55%"/>
+  gambarWah = <img src={wah} className="fixed-bottom mx-auto" alt="" id="img" height="55%"/>
+  
   state = {
     pic : this.gambarU
   }
@@ -90,12 +91,12 @@ class Gambar extends Component {
   }
   
   componentDidUpdate(prevProps, prevState) {
-    if (this.state.pic === this.gambarWah) {
       this.balikKeAwal = setTimeout(() => { 
+    if (this.state.pic === this.gambarWah) {
         this.setState(() => ({pic: this.gambarU}))
         console.log('uwah')
-      }, 200);
     }
+      }, 200);
   }
   
   componentWillUnmount() {
@@ -106,7 +107,7 @@ class Gambar extends Component {
     return (
       <div className='row'>
         <div className='col-6 col-md-6 mx-auto'>
-          <img src={this.state.pic} className="fixed-bottom mx-auto" alt="" id="img" height="55%"/>
+          {this.state.pic}
         </div>
       </div>
     )
