@@ -83,7 +83,9 @@ class Gambar extends Component {
     });
     window.onkeypress = function(event) {
       if (event.which == 32) {
-        this.handleClick();
+        this.setState({
+          pic: this.gambarWah
+        })
       }
     }
   }
