@@ -73,38 +73,24 @@ class Gambar extends Component {
   // }
   
   componentDidMount(){
-    window.addEventListener('mousedown', () => {
-      this.handleU();
-      // setTimeout(() => {
-      //   this.handleWah();
-      //   console.log('wah');
-      // }, 200);
-    })
-    window.onkeyup = function(e){
+    window.addEventListener('mousedown', this.handleU)
+    document.body.onkeyup = function(e){
       if(e.keyCode === 32){
         this.handleU();
-        // setTimeout(() => {
-        //   this.handleWah();
-        // }, 200);
       }
     }
   }
   
   componentDidUpdate(prevProps, prevState) {
     if (this.state.pic === wah) {
-      // when the state is updated (turned red), 
-      // a timeout is triggered to switch it back off
       this.balikKeAwal = setTimeout(() => { 
         this.setState(() => ({pic: u}))
-      }, 400);
+        console.log('uwah')
+      }, 200);
     }
   }
   
   componentWillUnmount() {
-    // we set the timeout to this.turnOffRedTimeout so that we can
-    // clean it up when the component is unmounted.
-    // otherwise you could get your app trying to modify the state on an
-    // unmounted component, which will throw an error
     clearTimeout(this.balikKeAwal);
   }
   
