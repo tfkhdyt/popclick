@@ -75,17 +75,17 @@ class Gambar extends Component {
   componentDidMount(){
     window.addEventListener('mousedown', () => {
       this.handleU();
-      setTimeout(() => {
-        this.handleWah();
-        console.log('wah');
-      }, 200);
+      // setTimeout(() => {
+      //   this.handleWah();
+      //   console.log('wah');
+      // }, 200);
     })
     window.onkeyup = function(e){
       if(e.keyCode === 32){
         this.handleU();
-        setTimeout(() => {
-          this.handleWah();
-        }, 200);
+        // setTimeout(() => {
+        //   this.handleWah();
+        // }, 200);
       }
     }
   }
