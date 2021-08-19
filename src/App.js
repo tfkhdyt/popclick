@@ -1,10 +1,10 @@
 import './App.css';
 import React, { Component, Fragment } from 'react'
-import Cookies from 'universal-cookie';
-import audio from './uwah.m4a'
+import audio from './kaget.wav'
 import u from './img/u.png'
 import wah from './img/wah.png'
-
+import Cookies from 'universal-cookie';
+ 
 const cookies = new Cookies();
 
 const Header = () => {
@@ -31,7 +31,10 @@ class Counter extends Component {
     this.setState({
       count: this.state.count + 1,
     });
-    cookies.set('count', parseInt(this.state.count), { path: '/' })
+    cookies.set('count', parseInt(this.state.count) , { 
+      path: '/',
+      expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1))
+    });
     this.audio.play()
     this.popOut()
   }
@@ -52,6 +55,16 @@ class Counter extends Component {
   }
 }
 
+const Gambar = props => {
+  return (
+    <div className='row'>
+      <div className='col-6 col-md-6 mx-auto'>
+        <img src={props.pic} className="fixed-bottom mx-auto" alt="" id="img" height="55%"/>
+      </div>
+    </div>
+  )
+}
+
 class App extends Component{
   state = {
     pic : u
@@ -65,14 +78,14 @@ class App extends Component{
       this.setState({
         pic: u
       })
-    }, 175)
+    }, 200)
   }
   
   componentDidMount(){
-    document.body.addEventListener('mousedown', () => {
+    window.addEventListener('mousedown', () => {
       this.handleEvent();
     })
-    document.body.onkeyup = function(e){
+    window.onkeyup = function(e){
       if(e.keyCode === 32){
         this.handleEvent()
       }
@@ -87,7 +100,7 @@ class App extends Component{
             <div className="col-12 col-md-8 mt-4 mx-auto">
               <Header />
               <Counter />
-              <img src={this.state.pic} className="fixed-bottom mx-auto img-fluid" alt="" id="img"/>
+              <Gambar pic={this.state.pic}/>
             </div>
           </div>
         </div>
