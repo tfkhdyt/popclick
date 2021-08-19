@@ -66,11 +66,11 @@ class Gambar extends Component {
     })
   }
   
-  handleWah = () => {
-    this.setState({
-      pic: u
-    })
-  }
+  // handleWah = () => {
+  //   this.setState({
+  //     pic: u
+  //   })
+  // }
   
   componentDidMount(){
     window.addEventListener('mousedown', () => {
@@ -88,6 +88,24 @@ class Gambar extends Component {
         // }, 200);
       }
     }
+  }
+  
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.pic === wah) {
+      // when the state is updated (turned red), 
+      // a timeout is triggered to switch it back off
+      this.balikKeAwal = setTimeout(() => { 
+        this.setState(() => ({pic: u}))
+      }, 200);
+    }
+  }
+  
+  componentWillUnmount() {
+    // we set the timeout to this.turnOffRedTimeout so that we can
+    // clean it up when the component is unmounted.
+    // otherwise you could get your app trying to modify the state on an
+    // unmounted component, which will throw an error
+    clearTimeout(this.balikKeAwal);
   }
   
   render(){
