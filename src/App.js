@@ -40,6 +40,12 @@ class Counter extends Component {
   }
   
   componentDidMount(){
+    console.log(`Jangan tangkep saya pak,
+ini cuma buat lucu-lucuan aja
+Saya lagi belajar React.js, 
+berhubung popcat.click lagi ngetren yaudah saya bikin aja versi clonenya.
+Saya bukan bermaksud makar 🙏🏼, 
+saya waktu pemilu milih bapak Jokowi kok, hehe`)
     window.addEventListener('mousedown', this.handleClick)
     window.onkeypress = function(event) {
       if (event.which === 32) {
@@ -94,7 +100,6 @@ class Gambar extends Component {
       this.balikKeAwal = setTimeout(() => { 
     if (this.state.pic === this.gambarWah) {
         this.setState(() => ({pic: this.gambarU}))
-        console.log('uwah')
     }
       }, 200);
   }
