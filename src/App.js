@@ -1,8 +1,8 @@
+import audio from './kaget.wav'
+import wah from './img/wah.png'
+import u from './img/u.png'
 import './App.css';
 import React, { Component, Fragment } from 'react'
-import audio from './kaget.wav'
-import u from './img/u.png'
-import wah from './img/wah.png'
 import Cookies from 'universal-cookie';
  
 const cookies = new Cookies();
@@ -86,7 +86,7 @@ class Gambar extends Component {
       this.balikKeAwal = setTimeout(() => { 
         this.setState(() => ({pic: u}))
         console.log('uwah')
-      }, 200);
+      }, 400);
     }
   }
   
