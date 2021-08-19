@@ -96,7 +96,7 @@ class Gambar extends Component {
       // a timeout is triggered to switch it back off
       this.balikKeAwal = setTimeout(() => { 
         this.setState(() => ({pic: u}))
-      }, 1000);
+      }, 400);
     }
   }
   
