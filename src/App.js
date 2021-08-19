@@ -55,17 +55,7 @@ class Counter extends Component {
   }
 }
 
-const Gambar = props => {
-  return (
-    <div className='row'>
-      <div className='col-6 col-md-6 mx-auto'>
-        <img src={props.pic} className="fixed-bottom mx-auto" alt="" id="img" height="55%"/>
-      </div>
-    </div>
-  )
-}
-
-class App extends Component{
+class Gambar extends Component {
   state = {
     pic : u
   }
@@ -87,18 +77,31 @@ class App extends Component{
       this.handleU();
       setTimeout(() => {
         this.handleWah();
-      }, 200)
+        console.log('wah');
+      }, 200);
     })
     window.onkeyup = function(e){
       if(e.keyCode === 32){
         this.handleU();
         setTimeout(() => {
           this.handleWah();
-        }, 200)
+        }, 200);
       }
     }
   }
   
+  render(){
+    return (
+      <div className='row'>
+        <div className='col-6 col-md-6 mx-auto'>
+          <img src={this.state.pic} className="fixed-bottom mx-auto" alt="" id="img" height="55%"/>
+        </div>
+      </div>
+    )
+  }
+}
+
+class App extends Component{
   render(){
     return (
       <Fragment>
@@ -107,7 +110,7 @@ class App extends Component{
             <div className="col-12 col-md-8 mt-4 mx-auto">
               <Header />
               <Counter />
-              <Gambar pic={this.state.pic}/>
+              <Gambar />
             </div>
           </div>
         </div>
