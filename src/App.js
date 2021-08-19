@@ -42,7 +42,7 @@ class Counter extends Component {
   componentDidMount(){
     window.addEventListener('mousedown', this.handleClick)
     window.onkeypress = function(event) {
-      if (event.which == 32) {
+      if (event.which === 32) {
         this.handleClick();
       }
     }
@@ -82,7 +82,7 @@ class Gambar extends Component {
       })
     });
     window.onkeypress = function(event) {
-      if (event.which == 32) {
+      if (event.which === 32) {
         this.setState({
           pic: this.gambarWah
         })
