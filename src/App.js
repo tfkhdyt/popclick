@@ -2,7 +2,6 @@ import suara from './kaget.wav';
 import './App.css';
 import React, { Component, Fragment } from 'react';
 import Cookies from 'universal-cookie';
-import Swal from 'sweetalert2';
 // import wah from './img/wah.png';
 // import u from './img/u.png';
  
