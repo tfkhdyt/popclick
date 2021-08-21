@@ -31,9 +31,10 @@ class Gambar extends Component {
     window.addEventListener('touchend', this.handleRelease);
     window.addEventListener('mousedown', this.handlePress);
     window.addEventListener('mouseup', this.handleRelease);
-    window.addEventListener('keydown', () => {
+    window.addEventListener('keydown', (e) => {
+      if (e.repeat) { return }
       this.handlePress();
-    }, {once: true});
+    });
     window.addEventListener('keyup', this.handleRelease);
   }
 
