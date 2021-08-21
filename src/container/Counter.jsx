@@ -92,12 +92,7 @@ Anda adalah seorang ${this.role}`);
   }
   
   componentDidMount(){
-    console.log(`Jangan tangkep saya pak,
-ini cuma buat lucu-lucuan aja
-Saya lagi belajar React.js, 
-berhubung popcat.click lagi ngetren yaudah saya bikin aja versi clonenya.
-Saya bukan bermaksud makar 🙏🏼, 
-saya waktu pemilu milih bapak Jokowi kok, hehe`);
+    console.log('Jangan ciduk saya pak, ini hanya untuk lucu-lucuan saja. Saya sedang belajar React.js, berhubung popcat.click sedang ngetren saat ini, ya sudah saya buat saja versi clonenya. Saya bukan bermaksud untuk makar 🙏🏼, saya saat pilpres saja memilih Pak Jokowi kok, hehe');
     window.addEventListener('touchstart', this.handlePress);
     window.addEventListener('touchend', this.handleRelease);
     window.addEventListener('mousedown', this.handlePress);
