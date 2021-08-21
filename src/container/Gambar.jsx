@@ -17,10 +17,12 @@ class Gambar extends Component {
   }
   
   handleRelease = () => {
-    clearTimeout(this.timer);
-    this.setState({
-      pic : this.gambarU
-    });
+    setTimeout(() => {
+      clearTimeout(this.timer);
+      this.setState({
+        pic : this.gambarU
+      });
+    }, 100);
   }
   
   componentDidMount(){
