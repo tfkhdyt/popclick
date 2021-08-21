@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Cookies from 'universal-cookie';
 import { Howl } from 'howler';
-import Swal from 'sweetalert2';
 
 import suara from '../audio/kaget.wav';
 
