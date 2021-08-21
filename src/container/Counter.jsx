@@ -102,8 +102,10 @@ saya waktu pemilu milih bapak Jokowi kok, hehe`);
     window.addEventListener('touchend', this.handleRelease);
     window.addEventListener('mousedown', this.handlePress);
     window.addEventListener('mouseup', this.handleRelease);
-    /*window.addEventListener('keydown', this.handlePress);
-    window.addEventListener('keyup', this.handleRelease);*/
+    window.addEventListener('keydown', () => {
+      this.handlePress();
+    }, {once: true});
+    window.addEventListener('keyup', this.handleRelease);
   }
   
   render () {

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import '../css/App.css';
 
 class Gambar extends Component {
   gambarU = "https://i.postimg.cc/JhTM6rh9/u.png";
-  gambarWah = "https://i.postimg.cc/zXNV12qp/1629370112907.png";
+  gambarWah = "https://i.postimg.cc/sx9FSwjR/wah.png";
   
   state = {
     pic : this.gambarU
@@ -30,15 +31,17 @@ class Gambar extends Component {
     window.addEventListener('touchend', this.handleRelease);
     window.addEventListener('mousedown', this.handlePress);
     window.addEventListener('mouseup', this.handleRelease);
-    /*window.addEventListener('keydown', this.handlePress);
-    window.addEventListener('keyup', this.handleRelease);*/
+    window.addEventListener('keydown', () => {
+      this.handlePress();
+    }, {once: true});
+    window.addEventListener('keyup', this.handleRelease);
   }
 
   render(){
     return (
       <div className='row'>
         <div className='col-6 col-md-6 mx-auto'>
-          <img src={this.state.pic} className="fixed-bottom mx-auto" alt="" id="img" height="55%" style={{marginBottom:'-5px'}}/>
+          <img src={this.state.pic} className="fixed-bottom mx-auto" alt="" id="img" style={{marginBottom:'-5px'}}/>
         </div>
       </div>
     )
