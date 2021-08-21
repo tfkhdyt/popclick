@@ -38,7 +38,7 @@ class Gambar extends Component {
     return (
       <div className='row'>
         <div className='col-6 col-md-6 mx-auto'>
-          <img src={this.state.pic} className="fixed-bottom mx-auto" alt="" id="img" height="55%"/>
+          <img src={this.state.pic} className="fixed-bottom mx-auto" alt="" id="img" height="55%" style={{marginBottom:'-5px'}}/>
         </div>
       </div>
     )
