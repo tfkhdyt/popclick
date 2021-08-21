@@ -2,6 +2,7 @@ import suara from './kaget.wav';
 import './App.css';
 import React, { Component, Fragment } from 'react';
 import Cookies from 'universal-cookie';
+import {Howl} from 'howler';
 // import wah from './img/wah.png';
 // import u from './img/u.png';
  
@@ -17,7 +18,10 @@ class Counter extends Component {
     touch : 0
   }
   
-  audio = new Audio(suara)
+  // audio = new Audio(suara)
+  audio = new Howl({
+    src: [suara]
+  });
   
   popOut = () => {
     const element = document.getElementById('counter')
@@ -28,9 +32,9 @@ class Counter extends Component {
   
   handlePress = () => {
     this.timer = setTimeout(() => {
-      this.audio.pause();
-      this.audio.currentTime = 0;
-      this.audio.play().catch(err => console.log(err));
+      this.audio.stop();
+      this.audio.play();
+      this.audio.fade(0, 1, 100);
       this.popOut();
       this.setState({
         count: this.state.count + 1,
