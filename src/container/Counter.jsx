@@ -37,6 +37,10 @@ class Counter extends Component {
     });
   }
   
+  formatNumber = (num) => {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+  }
+  
   showNotif = (count) => {
     switch (count) {
       case 100:
@@ -65,7 +69,7 @@ class Counter extends Component {
         break;
     }
     if(this.role !== undefined){
-      toast.success(`Anda telah mencapai ${count}!
+      toast.success(`Anda telah mencapai ${this.formatNumber(count)}!
 Anda adalah seorang ${this.role}`);
       this.role = undefined;
     }
@@ -105,7 +109,7 @@ saya waktu pemilu milih bapak Jokowi kok, hehe`);
   render () {
     return (
       <div>
-        <h2 id="counter" style={{marginTop:'-15px'}}>{this.state.count}</h2>
+        <h2 id="counter" style={{marginTop:'-15px'}}>{this.formatNumber(this.state.count)}</h2>
       </div>
     )
   }
