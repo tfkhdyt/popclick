@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Cookies from 'universal-cookie';
 import { Howl } from 'howler';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
   
 import suara from '../audio/kaget.wav';
 import 'react-toastify/dist/ReactToastify.css';
