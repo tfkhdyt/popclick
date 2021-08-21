@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Cookies from 'universal-cookie';
 import { Howl } from 'howler';
-
+import { ToastContainer, toast } from 'react-toastify';
+  
 import suara from '../audio/kaget.wav';
+import 'react-toastify/dist/ReactToastify.css';
 
 const cookies = new Cookies();
 
@@ -35,6 +37,40 @@ class Counter extends Component {
     });
   }
   
+  showNotif = (count) => {
+    switch (count) {
+      case 100:
+        this.role = 'BuzzeRp';
+        break;
+      case 500:
+        this.role = 'Kadrun';
+        break;
+      case 1000:
+        this.role = 'Pemakar Handal';
+        break;
+      case 5000:
+        this.role = 'Mahasiswa Jurusan Teknik Perdemoan';
+        break;
+      case 10000:
+        this.role = 'Buronan';
+        break;
+      case 30000:
+        this.role = 'Penjahat Kelas Kakap';
+        break;
+      case 999999:
+        this.role = 'Cheater';
+        break;
+      default:
+        this.role = undefined;
+        break;
+    }
+    if(this.role !== undefined){
+      toast.success(`Anda telah mencapai ${count}!
+Anda adalah seorang ${this.role}`);
+      this.role = undefined;
+    }
+  }
+  
   handlePress = () => {
     this.timer = setTimeout(() => {
       this.playAudio();
@@ -43,6 +79,7 @@ class Counter extends Component {
         count: this.state.count + 1,
       });
       this.setCookies(this.state.count);
+      this.showNotif(this.state.count);
     }, 0);
   }
   
@@ -67,7 +104,9 @@ saya waktu pemilu milih bapak Jokowi kok, hehe`);
   
   render () {
     return (
-      <h2 id="counter" style={{marginTop:'-15px'}}>{this.state.count}</h2>
+      <div>
+        <h2 id="counter" style={{marginTop:'-15px'}}>{this.state.count}</h2>
+      </div>
     )
   }
 }

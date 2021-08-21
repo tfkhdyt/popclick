@@ -1,15 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+html{
+  overflow: hidden;
+  height: 100%;    
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(../img/bgBanteng.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-image: url(../img/bgBanteng.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
   background-size: cover;
+  overflow: auto;
+  height: 100%;
+  /*background: url(../img/bgBanteng.jpg) no-repeat center center fixed;*/
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*-o-background-size: cover;*/
+  /*background-size: cover;*/
   -webkit-user-select: none;
   -webkit-touch-callout: none;
   -moz-user-select: none;
