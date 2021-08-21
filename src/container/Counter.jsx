@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Cookies from 'universal-cookie';
 import { Howl } from 'howler';
+import Swal from 'sweetalert2';
 
 import suara from '../audio/kaget.wav';
 
@@ -57,12 +58,12 @@ Saya lagi belajar React.js,
 berhubung popcat.click lagi ngetren yaudah saya bikin aja versi clonenya.
 Saya bukan bermaksud makar 🙏🏼, 
 saya waktu pemilu milih bapak Jokowi kok, hehe`);
-    window.addEventListener('touchstart', this.handlePress);
-    window.addEventListener('touchend', this.handleRelease);
-    window.addEventListener('mousedown', this.handlePress);
-    window.addEventListener('mouseup', this.handleRelease);
-    window.addEventListener('keydown', this.handlePress);
-    window.addEventListener('keyup', this.handleRelease);
+    document.body.addEventListener('touchstart', this.handlePress);
+    document.body.addEventListener('touchend', this.handleRelease);
+    document.body.addEventListener('mousedown', this.handlePress);
+    document.body.addEventListener('mouseup', this.handleRelease);
+    /*window.addEventListener('keydown', this.handlePress);
+    window.addEventListener('keyup', this.handleRelease);*/
   }
   
   render () {

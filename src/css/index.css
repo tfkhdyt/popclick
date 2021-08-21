@@ -22,17 +22,17 @@ code {
     monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
+#header, #counter{
   font-weight: bold;
   color: white;
   -webkit-text-stroke-color: black;
   font-size: 4.5rem;
 }
 
-h1 {
+#header {
   -webkit-text-stroke-width: 2px;
 }
 
-h2 {
+#counter {
   -webkit-text-stroke-width: 2.5px;
 }

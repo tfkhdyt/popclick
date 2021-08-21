@@ -26,12 +26,12 @@ class Gambar extends Component {
   }
   
   componentDidMount(){
-    window.addEventListener('touchstart', this.handlePress);
-    window.addEventListener('touchend', this.handleRelease);
-    window.addEventListener('mousedown', this.handlePress);
-    window.addEventListener('mouseup', this.handleRelease);
-    window.addEventListener('keydown', this.handlePress);
-    window.addEventListener('keyup', this.handleRelease);
+    document.body.addEventListener('touchstart', this.handlePress);
+    document.body.addEventListener('touchend', this.handleRelease);
+    document.body.addEventListener('mousedown', this.handlePress);
+    document.body.addEventListener('mouseup', this.handleRelease);
+    /*window.addEventListener('keydown', this.handlePress);
+    window.addEventListener('keyup', this.handleRelease);*/
   }
 
   render(){
