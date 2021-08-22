@@ -27,7 +27,7 @@ class Goodbye extends React.Component {
           <div className="col-12 col-md-8 my-3 text-white mx-auto">
             <p className="text-center fst-italic">Assalamu'alaikum Wr. Wb.</p>
             <p className="text-start">
-              Halo temen-temen semua, saya gak nyangka <b>POPOWI</b> bisa sampe se-viral ini. Yang pada awalnya hanya saya share di group <i>*ngf*rm*t*k* Cr*ng*p*st*ng</i>, sekarang udah tersebar ke mana-mana, bahkan sampe masuk berita.
+              Halo temen-temen semua, saya gak nyangka <b>POPOWI</b> bisa sampe se-viral ini. Yang pada awalnya hanya saya share di group <i>*ngf*rm*t*k* Cr*ng*p*st*ng</i>, sekarang udah tersebar ke mana-mana, bahkan sampe masuk <i>Tigtog</i>.
             </p>
             <p className="text-start">
               Saya tidak anti-rezim, saya tidak bermaksud makar. Tujuan saya membuat web ini hanya untuk melatih skill pemrograman saya. Saya mulai mendalami Bahasa <i>JavaScript</i> 1 bulan yang lalu, dan saya baru mulai belajar menggunakan <i>ReactJS</i> 1 minggu yang lalu. Dalam 1 bulan terakhir saya sudah banyak membuat web app menggunakan <i>JavaScript</i>, dan salah satunya adalah <b>POPOWI</b>.
