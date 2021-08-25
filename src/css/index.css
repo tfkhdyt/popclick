@@ -49,3 +49,23 @@ code {
 #counter {
   -webkit-text-stroke-width: 2.5px;
 }
+
+.v-divider{
+ margin-left:5px;
+ margin-right:5px;
+ width:1px;
+ height:100%;
+ border-left:0.5px solid #b5b5b5;
+}
+
+.h-divider{
+ margin-top:-10px;
+ margin-bottom:7px;
+ height:1px;
+ width:100%;
+ border-bottom:0.25px solid #b5b5b5;
+}
+
+.btnLeaderboard {
+  border-radius : 0;
+}

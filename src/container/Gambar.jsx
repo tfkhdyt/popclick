@@ -27,9 +27,17 @@ class Gambar extends Component {
   }
   
   componentDidMount(){
-    window.addEventListener('touchstart', this.handlePress);
+    window.addEventListener('touchstart', (e) => {
+      if (!e.target.classList.contains('unevent')) {
+        this.handlePress();
+      }
+    });
     window.addEventListener('touchend', this.handleRelease);
-    window.addEventListener('mousedown', this.handlePress);
+    window.addEventListener('mousedown', (e) => {
+      if (!e.target.classList.contains('unevent')) {
+        this.handlePress();
+      }
+    });
     window.addEventListener('mouseup', this.handleRelease);
     window.addEventListener('keydown', (e) => {
       if (e.repeat) { return }
@@ -42,7 +50,7 @@ class Gambar extends Component {
     return (
       <div className='row'>
         <div className='col-6 col-md-6 mx-auto'>
-          <img src={this.state.pic} className="fixed-bottom mx-auto" alt="" id="img" style={{marginBottom:'-5px'}}/>
+          <img src={this.state.pic} className="fixed-bottom mx-auto mb-5" alt="" id="img" style={{marginBottom:'-5px'}}/>
         </div>
       </div>
     )

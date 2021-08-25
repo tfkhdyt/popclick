@@ -93,9 +93,17 @@ Anda adalah seorang ${this.role}`);
   
   componentDidMount(){
     console.log('Jangan ciduk saya pak. Saya sedang belajar React.js, berhubung popcat.click sedang ngetren saat ini, ya sudah saya buat saja versi clonenya. Saya bukan bermaksud untuk makar 🙏🏼, saya saat pilpres saja memilih Pak Jokowi kok, hehe');
-    window.addEventListener('touchstart', this.handlePress);
+    window.addEventListener('touchstart', (e) => {
+      if (!e.target.classList.contains('unevent')) {
+        this.handlePress();
+      }
+    });
     window.addEventListener('touchend', this.handleRelease);
-    window.addEventListener('mousedown', this.handlePress);
+    window.addEventListener('mousedown', (e) => {
+      if (!e.target.classList.contains('unevent')) {
+        this.handlePress();
+      }
+    });
     window.addEventListener('mouseup', this.handleRelease);
     window.addEventListener('keydown', (e) => {
       if (e.repeat) { return }

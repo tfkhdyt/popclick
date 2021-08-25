@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import Header from './component/Header';
 import Counter from './container/Counter';
 import Gambar from './container/Gambar';
+import Leaderboard from './container/Leaderboard';
 import './css/App.css';
 
 class App extends Component{
@@ -26,6 +27,7 @@ class App extends Component{
               <Header />
               <Counter />
               <Gambar />
+              <Leaderboard />
             </div>
           </div>
         </div>
