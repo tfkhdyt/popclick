@@ -1,0 +1,18 @@
+/* Error: Undefined variable.
+ *   ,
+ * 4 |   z-index: $zindex-offcanvas;
+ *   |            ^^^^^^^^^^^^^^^^^
+ *   '
+ *   ../../node_modules/bootstrap/scss/_offcanvas.scss 4:12  @import
+ *   custom.scss 1:9                                         root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 4 \2502    z-index: $zindex-offcanvas;\a   \2502             ^^^^^^^^^^^^^^^^^\a   \2575 \a   ../../node_modules/bootstrap/scss/_offcanvas.scss 4:12  @import\a   custom.scss 1:9                                         root stylesheet";
+}

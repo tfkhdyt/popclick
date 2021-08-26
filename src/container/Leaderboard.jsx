@@ -83,7 +83,7 @@ class Leaderboard extends Component {
   render () {
     return (
       <Fragment>
-        <button className="btn btn-light btn-lg col-12 col-md-8 fixed-bottom unevent p-3 btnLeaderboard" type="button" onClick={this.getStatAPI} data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" style={{width : '100%'}}>
+        <button className="btn btn-light btn-lg col-12 col-md-8 fixed-bottom unevent p-3 btnLeaderboard mx-auto" type="button" onClick={this.getStatAPI} data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
           <div className="row unevent" style={{fontSize: '.8rem'}}>
             <div className="col-1 float-start unevent">🏆</div>
             <div className="col v-divider unevent">#1 {this.state.max.prov} - {this.convertToInternationalCurrencySystem(this.state.max.score)}</div>
@@ -97,14 +97,14 @@ class Leaderboard extends Component {
             <b className="offcanvas-title unevent" id="offcanvasBottomLabel">🏆 Top Provinsi Pemakar</b>
             <button type="button" className="btn-close text-reset unevent" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <div className="offcanvas-body small unevent container pt-0">
-            <Indonesia total={this.state.total}/>
-            {
-              this.state.stat.map((stat, i) => {
-                return <Provinsi key={stat._id} nomor={++i} data={stat} flag={stat.flag}/>
-              })
-            }
-            <Team />
+          <div className="offcanvas-body small container unevent pt-0">
+              <Indonesia total={this.state.total}/>
+              {
+                this.state.stat.map((stat, i) => {
+                  return <Provinsi key={stat._id} nomor={++i} data={stat} flag={stat.flag}/>
+                })
+              }
+              <Team />
           </div>
         </div>
       </Fragment>

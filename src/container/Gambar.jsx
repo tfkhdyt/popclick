@@ -49,7 +49,7 @@ class Gambar extends Component {
   render(){
     return (
       <div className='row'>
-        <div className='col-6 col-md-6 mx-auto'>
+        <div className='col-12 col-md-8 mx-auto'>
           <img src={this.state.pic} className="fixed-bottom mx-auto mb-5" alt="" id="img" style={{marginBottom:'-5px'}}/>
         </div>
       </div>

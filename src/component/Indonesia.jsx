@@ -7,7 +7,7 @@ const formatNumber = (num) => {
 const Indonesia = (props) => {
   return (
     <div>
-      <div className="row unevent" style={ { fontSize: '10pt' }}>
+      <div className="row unevent" style={{ fontSize: '10pt'}}>
         <div className="col text-start unevent">
           <p className="unevent">
             🇮🇩 Indonesia
