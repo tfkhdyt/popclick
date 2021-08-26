@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Cookies from 'universal-cookie';
 import { Howl } from 'howler';
 import { toast } from 'react-toastify';
+import axios from 'axios';
   
 import suara from '../audio/kaget.wav';
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,7 +11,9 @@ const cookies = new Cookies();
 
 class Counter extends Component {
   state = {
-    count : parseInt(cookies.get('count')) || 0
+    count : parseInt(cookies.get('count')) || 0,
+    userProv : cookies.get('userProv'),
+    userProvScore : ''
   }
   
   audio = new Howl({
@@ -75,6 +78,16 @@ Anda adalah seorang ${this.role}`);
     }
   }
   
+  
+  putDataToAPI = () => {
+    axios.patch(`${process.env.REACT_APP_API_GET}${this.state.userProv}`, {})
+    .then((res) => {
+      console.log(`Success : ${this.state.userProv} = ${this.state.userProvScore + 1}`);
+    }, (err) => {
+      console.log('error: ', err)
+    })
+  }
+  
   handlePress = () => {
     this.timer = setTimeout(() => {
       this.playAudio();
@@ -83,6 +96,7 @@ Anda adalah seorang ${this.role}`);
         count: this.state.count + 1,
       });
       this.setCookies(this.state.count);
+      this.putDataToAPI();
       this.showNotif(this.state.count);
     }, 0);
   }
@@ -94,13 +108,13 @@ Anda adalah seorang ${this.role}`);
   componentDidMount(){
     console.log('Jangan ciduk saya pak. Saya sedang belajar React.js, berhubung popcat.click sedang ngetren saat ini, ya sudah saya buat saja versi clonenya. Saya bukan bermaksud untuk makar 🙏🏼, saya saat pilpres saja memilih Pak Jokowi kok, hehe');
     window.addEventListener('touchstart', (e) => {
-      if (!e.target.classList.contains('unevent')) {
+      if (!e.target.classList.contains('unevent') && !e.target.classList.contains('swal2-timer-progress-bar-container')) {
         this.handlePress();
       }
     });
     window.addEventListener('touchend', this.handleRelease);
     window.addEventListener('mousedown', (e) => {
-      if (!e.target.classList.contains('unevent')) {
+      if (!e.target.classList.contains('unevent') && !e.target.classList.contains('swal2-timer-progress-bar-container')) {
         this.handlePress();
       }
     });

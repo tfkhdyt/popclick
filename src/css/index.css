@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');*/
 
 html{
   overflow: hidden;
@@ -7,7 +7,7 @@ html{
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Metropolis', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: url(../img/bgBanteng.jpg);
@@ -30,13 +30,9 @@ body {
   user-select: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 #header, #counter{
-  font-weight: bold;
+  font-family: 'MetropolisBold';
+  /*font-weight: bold;*/
   color: white;
   -webkit-text-stroke-color: black;
   font-size: 4.5rem;

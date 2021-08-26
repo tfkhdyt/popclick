@@ -28,13 +28,13 @@ class Gambar extends Component {
   
   componentDidMount(){
     window.addEventListener('touchstart', (e) => {
-      if (!e.target.classList.contains('unevent')) {
+      if (!e.target.classList.contains('unevent') && !e.target.classList.contains('swal2-timer-progress-bar-container')) {
         this.handlePress();
       }
     });
     window.addEventListener('touchend', this.handleRelease);
     window.addEventListener('mousedown', (e) => {
-      if (!e.target.classList.contains('unevent')) {
+      if (!e.target.classList.contains('unevent') && !e.target.classList.contains('swal2-timer-progress-bar-container')) {
         this.handlePress();
       }
     });
