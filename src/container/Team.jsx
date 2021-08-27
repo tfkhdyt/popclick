@@ -93,7 +93,7 @@ class Team extends Component {
       },
       inputPlaceholder: 'Pilih Provinsi',
       inputValue: cookies.get('userProv'),
-      showCancelButton: true,
+      showCancelButton: (cookies.get('userProv')) ? true : false,
       allowOutsideClick: false
     })
     
