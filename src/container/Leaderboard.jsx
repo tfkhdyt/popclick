@@ -92,12 +92,12 @@ class Leaderboard extends Component {
   render () {
     return (
       <Fragment>
-        <button className="btn btn-light btn-lg col-12 col-md-6 fixed-bottom unevent p-3 btnLeaderboard mx-auto" type="button" onClick={this.getStatAPI} data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-          <div className="row unevent" style={{fontSize: '.85rem'}}>
-            <div className="col-1 float-start unevent">🏆</div>
-            <div className="col v-divider unevent">#1 <img className='unevent' src={this.state.max.flag} height='15' style={{margin:'0 2px', marginBottom : '5px'}} alt=''/> {this.convertToInternationalCurrencySystem(this.state.max.score)}</div>
-            <div className="col-1 unevent">...</div>
-            <div className="col unevent bold" style={{fontSize:'.9rem'}}><img className='unevent' src={this.state.userProvFlag} height='15' style={{margin:'0 2px', marginBottom : '5px'}} alt=''/> {this.formatNumber(this.state.userProvScore)}</div>
+        <button className="btn btn-light btn-lg col-12 col-md-6 fixed-bottom unevent px-3 py-2 btnLeaderboard mx-auto" type="button" onClick={this.getStatAPI} data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+          <div className="row unevent" style={{fontSize: '.7rem', marginTop : '1.5px'}}>
+            <div className="col-1 float-start unevent mt-2">🏆</div>
+            <div className="col v-divider unevent" style={{marginTop : '1px'}}>#1 <img className='unevent mt-2' src={this.state.max.flag} height='15' style={{margin:'0 2px', marginBottom : '10.5px'}} alt=''/> {this.convertToInternationalCurrencySystem(this.state.max.score)}</div>
+            <div className="col-1 unevent mt-2">...</div>
+            <div className="col unevent bold" style={{fontSize:'.9rem', marginTop : '5.5px'}}><img className='unevent' src={this.state.userProvFlag} height='15' style={{margin:'0 2px', marginBottom : '5px'}} alt=''/> {this.formatNumber(this.state.userProvScore)}</div>
           </div>
         </button>
         
