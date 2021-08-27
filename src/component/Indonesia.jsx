@@ -10,7 +10,7 @@ const Indonesia = (props) => {
       <div className="row unevent" style={{ fontSize: '10pt'}}>
         <div className="col text-start unevent">
           <p className="unevent">
-            🇮🇩 Indonesia
+            <img src='https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg' alt='Bendera Indonesia' height='17' style={{marginBottom : '2.5px'}} className='unevent me-2'/>Indonesia
           </p>
         </div>
         <div className="col unevent text-end">

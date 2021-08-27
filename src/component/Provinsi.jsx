@@ -25,7 +25,7 @@ const Provinsi = (props) => {
       <div className="row unevent" style={ { fontSize: '10pt' }}>
         <div className="col text-start unevent">
           <p className="unevent">
-          {position}&nbsp;&nbsp;<img src={props.flag} height='17' style={{marginBottom : '2.5px'}} alt='bendera provinsi' className='unevent'/>&nbsp;&nbsp;{provinsi}
+          {position}<img src={props.flag} height='17' style={{marginBottom : '2.5px'}} alt='bendera provinsi' className='unevent mx-2'/>{provinsi}
           </p>
         </div>
         <div className="col unevent text-end">
