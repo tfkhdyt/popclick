@@ -29,7 +29,7 @@ Dana hasil donasi akan digunakan untuk:<br/>
 <ol class='unevent'>
   <li class='unevent text-start'>Upgrade server</li>
   <li class='unevent text-start'>Upgrade database</li>
-  <li class='unevent text-start'>Beli domain ".click"</li>
+  <li class='unevent text-start'>Beli domain</li>
   <li class='unevent text-start'>Beli kuota</li>
   <li class='unevent text-start'>Biaya pelarian bila dev jadi buronan</li>
 </ol>`,
