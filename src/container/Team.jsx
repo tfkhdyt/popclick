@@ -39,6 +39,7 @@ class Team extends Component {
         footer: 'unevent'
       },
       title: 'Pilih Provinsi Anda',
+      html : (cookies.get('userProv')) ? '<font color="red" class="red bold">Jumlah click Anda akan direset jika pindah team!</font>' : '',
       input: 'select',
       inputOptions: {
         'Sumatera': {
@@ -136,7 +137,7 @@ class Team extends Component {
   render () {
     return (
       <Fragment>
-        <button className="btn btn-primary unevent float-end mt-1 mb-0" onClick={this.setProv}><i class="fas fa-edit unevent"></i> Ganti Provinsi</button>
+        <button className="btn btn-primary btn-sm unevent mt-1 mb-0 mx-1" onClick={this.setProv}><i class="fas fa-user-friends unevent"></i> Ganti Team</button>
       </Fragment>
     );
   }

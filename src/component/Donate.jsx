@@ -25,7 +25,7 @@ const showDonateDialog = () => {
     },
     title: 'Donate',
     html: `<p class="text-start unevent">Ingin <b class='unevent'>POPOWI</b> tetap berjalan? bantulah pengembangan game ini dengan donasi.<br/><br/>
-Dana hasil donasi akan digunakan untuk:<br/>
+Dana hasil donasi akan digunakan untuk:
 <ol class='unevent'>
   <li class='unevent text-start'>Upgrade server</li>
   <li class='unevent text-start'>Upgrade database</li>
@@ -47,7 +47,7 @@ Dana hasil donasi akan digunakan untuk:<br/>
 
 const Donate = () => {
   return (
-    <button className='btn btn-success unevent float-start mt-1 mb-0' onClick={showDonateDialog}><i class="fas fa-money-bill-wave unevent"></i> Donate</button>
+    <button className='btn btn-success btn-sm unevent mx-1 mt-1 mb-0' onClick={showDonateDialog}><i class="fas fa-money-bill-wave unevent"></i> Donate</button>
   );
 }
 

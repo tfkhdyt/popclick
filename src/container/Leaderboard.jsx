@@ -6,6 +6,7 @@ import Provinsi from '../component/Provinsi';
 import Indonesia from '../component/Indonesia';
 import Team from '../container/Team';
 import Donate from '../component/Donate';
+import Bug from '../component/Bug';
 
 const cookies = new Cookies();
 
@@ -108,11 +109,10 @@ class Leaderboard extends Component {
                 return <Provinsi key={stat._id} nomor={++i} data={stat} flag={stat.flag}/>
               })
             }
-            <div className='row'>
+            <div className='row mx-auto'>
               <div className='col'>
                 <Donate />
-              </div>
-              <div className='col'>
+                <Bug />
                 <Team />
               </div>
             </div>
