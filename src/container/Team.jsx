@@ -136,7 +136,7 @@ class Team extends Component {
   render () {
     return (
       <Fragment>
-        <button className="btn btn-primary unevent float-end mt-1 mb-0" onClick={this.setProv}>Ganti Provinsi</button>
+        <button className="btn btn-primary unevent float-end mt-1 mb-0" onClick={this.setProv}><i class="fas fa-edit unevent"></i> Ganti Provinsi</button>
       </Fragment>
     );
   }

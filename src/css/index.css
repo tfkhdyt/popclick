@@ -65,3 +65,7 @@ body {
 .btnLeaderboard {
   border-radius : 0;
 }
+
+.bold, h1, h2, b, .swal2-title {
+  font-family: 'MetropolisBold';
+}

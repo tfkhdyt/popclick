@@ -5,6 +5,7 @@ import Cookies from 'universal-cookie';
 import Provinsi from '../component/Provinsi';
 import Indonesia from '../component/Indonesia';
 import Team from '../container/Team';
+import Donate from '../component/Donate';
 
 const cookies = new Cookies();
 
@@ -14,7 +15,8 @@ class Leaderboard extends Component {
     total : '',
     max : [],
     userProv : cookies.get('userProv'),
-    userProvScore : ''
+    userProvScore : '',
+    userProvFlag : ''
   }
   
   getStatAPI = () => {
@@ -46,8 +48,10 @@ class Leaderboard extends Component {
     axios.get(`${process.env.REACT_APP_API_GET}${prov}`)
     .then(res => {
       const userProvScore = res.data.data.score;
+      const userProvFlag = res.data.data.flag;
       this.setState({
-        userProvScore : userProvScore
+        userProvScore : userProvScore,
+        userProvFlag : userProvFlag
       });
     })
   }
@@ -84,11 +88,11 @@ class Leaderboard extends Component {
     return (
       <Fragment>
         <button className="btn btn-light btn-lg col-12 col-md-8 fixed-bottom unevent p-3 btnLeaderboard mx-auto" type="button" onClick={this.getStatAPI} data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-          <div className="row unevent" style={{fontSize: '.8rem'}}>
+          <div className="row unevent" style={{fontSize: '.85rem'}}>
             <div className="col-1 float-start unevent">🏆</div>
-            <div className="col v-divider unevent">#1 {this.state.max.prov} - {this.convertToInternationalCurrencySystem(this.state.max.score)}</div>
+            <div className="col v-divider unevent">#1 <img className='unevent' src={this.state.max.flag} height='15' style={{margin:'0 2px', marginBottom : '5.5px'}} alt=''/> {this.convertToInternationalCurrencySystem(this.state.max.score)}</div>
             <div className="col-1 unevent">...</div>
-            <div className="col unevent fw-bold">{this.state.userProv} - {this.state.userProvScore}</div>
+            <div className="col unevent bold" style={{fontSize:'.9rem'}}><img className='unevent' src={this.state.userProvFlag} height='15' style={{margin:'0 2px', marginBottom : '5.5px'}} alt=''/> {this.state.userProvScore}</div>
           </div>
         </button>
         
@@ -98,13 +102,20 @@ class Leaderboard extends Component {
             <button type="button" className="btn-close text-reset unevent" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div className="offcanvas-body small container unevent pt-0">
-              <Indonesia total={this.state.total}/>
-              {
-                this.state.stat.map((stat, i) => {
-                  return <Provinsi key={stat._id} nomor={++i} data={stat} flag={stat.flag}/>
-                })
-              }
-              <Team />
+            <Indonesia total={this.state.total}/>
+            {
+              this.state.stat.map((stat, i) => {
+                return <Provinsi key={stat._id} nomor={++i} data={stat} flag={stat.flag}/>
+              })
+            }
+            <div className='row'>
+              <div className='col'>
+                <Donate />
+              </div>
+              <div className='col'>
+                <Team />
+              </div>
+            </div>
           </div>
         </div>
       </Fragment>
