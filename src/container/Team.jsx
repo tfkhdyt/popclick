@@ -94,6 +94,7 @@ class Team extends Component {
       inputPlaceholder: 'Pilih Provinsi',
       inputValue: cookies.get('userProv'),
       showCancelButton: true,
+      allowOutsideClick: false
     })
     
     if (userProv) {

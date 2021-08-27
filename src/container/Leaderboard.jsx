@@ -88,7 +88,7 @@ class Leaderboard extends Component {
   render () {
     return (
       <Fragment>
-        <button className="btn btn-light btn-lg col-12 col-md-8 fixed-bottom unevent p-3 btnLeaderboard mx-auto" type="button" onClick={this.getStatAPI} data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+        <button className="btn btn-light btn-lg col-12 col-md-6 fixed-bottom unevent p-3 btnLeaderboard mx-auto" type="button" onClick={this.getStatAPI} data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
           <div className="row unevent" style={{fontSize: '.85rem'}}>
             <div className="col-1 float-start unevent">🏆</div>
             <div className="col v-divider unevent">#1 <img className='unevent' src={this.state.max.flag} height='15' style={{margin:'0 2px', marginBottom : '5.5px'}} alt=''/> {this.convertToInternationalCurrencySystem(this.state.max.score)}</div>
@@ -97,7 +97,7 @@ class Leaderboard extends Component {
           </div>
         </button>
         
-        <div className="offcanvas offcanvas-bottom unevent" tabIndex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" data-bs-backdrop="false" style={{height:'76.5vh'}}>
+        <div className="offcanvas offcanvas-bottom unevent col-12 col-md-6 mx-auto" tabIndex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" data-bs-backdrop="false" style={{height:'76.5vh'}}>
           <div className="offcanvas-header unevent py-2">
             <b className="offcanvas-title unevent" id="offcanvasBottomLabel">🏆 Top Provinsi Pemakar</b>
             <button type="button" className="btn-close text-reset unevent" data-bs-dismiss="offcanvas" aria-label="Close"></button>
