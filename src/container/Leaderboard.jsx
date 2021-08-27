@@ -74,7 +74,11 @@ class Leaderboard extends Component {
 
     : Math.abs(Number(labelValue));
 
-}
+  }
+
+  formatNumber = (num) => {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+  }
   
   componentDidMount(){
     this.getStatAPI();
@@ -93,7 +97,7 @@ class Leaderboard extends Component {
             <div className="col-1 float-start unevent">🏆</div>
             <div className="col v-divider unevent">#1 <img className='unevent' src={this.state.max.flag} height='15' style={{margin:'0 2px', marginBottom : '5.5px'}} alt=''/> {this.convertToInternationalCurrencySystem(this.state.max.score)}</div>
             <div className="col-1 unevent">...</div>
-            <div className="col unevent bold" style={{fontSize:'.9rem'}}><img className='unevent' src={this.state.userProvFlag} height='15' style={{margin:'0 2px', marginBottom : '5.5px'}} alt=''/> {this.state.userProvScore}</div>
+            <div className="col unevent bold" style={{fontSize:'.9rem'}}><img className='unevent' src={this.state.userProvFlag} height='15' style={{margin:'0 2px', marginBottom : '5.5px'}} alt=''/> {this.formatNumber(this.state.userProvScore)}</div>
           </div>
         </button>
         
