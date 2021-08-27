@@ -82,7 +82,7 @@ Anda adalah seorang ${this.role}`);
   putDataToAPI = () => {
     axios.patch(`${process.env.REACT_APP_API_GET}${this.state.userProv}`, {})
     .then((res) => {
-      console.log(`Success : ${this.state.userProv} = ${this.state.userProvScore + 1}`);
+      // console.log(`Success : ${this.state.userProv} = ${this.state.userProvScore + 1}`);
     }, (err) => {
       console.log('error: ', err)
     })
