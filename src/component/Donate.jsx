@@ -31,6 +31,7 @@ Dana hasil donasi akan digunakan untuk:
   <li class='unevent text-start'>Upgrade database</li>
   <li class='unevent text-start'>Beli domain</li>
   <li class='unevent text-start'>Beli kuota</li>
+  <li class='unevent text-start'>Bikin SIM</li>
   <li class='unevent text-start'>Biaya pelarian bila dev jadi buronan</li>
 </ol>`,
     showCancelButton: true,
