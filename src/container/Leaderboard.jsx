@@ -86,7 +86,7 @@ class Leaderboard extends Component {
     setInterval(() => {
       this.getStatAPI();
       this.getUserProvScore(this.state.userProv);
-    }, 2500)
+    }, 5000)
   }
   
   render () {

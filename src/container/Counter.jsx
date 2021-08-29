@@ -13,7 +13,8 @@ class Counter extends Component {
   state = {
     count : parseInt(cookies.get('count')) || 0,
     userProv : cookies.get('userProv'),
-    userProvScore : ''
+    userProvScore : '',
+    tempCount : 0
   }
   
   audio = new Howl({
@@ -80,9 +81,14 @@ Anda adalah seorang ${this.role}`);
   
   
   putDataToAPI = () => {
-    axios.patch(`${process.env.REACT_APP_API_GET}${this.state.userProv}`, {})
+    axios.patch(`${process.env.REACT_APP_API_GET}${this.state.userProv}`, {
+      score: this.state.tempCount
+    })
     .then((res) => {
       // console.log(`Success : ${this.state.userProv} = ${this.state.userProvScore + 1}`);
+      this.setState({
+        tempCount : 0
+      });
     }, (err) => {
       console.log('error: ', err)
     })
@@ -94,9 +100,10 @@ Anda adalah seorang ${this.role}`);
       this.popOut();
       this.setState({
         count: this.state.count + 1,
+        tempCount: this.state.tempCount + 1
       });
       this.setCookies(this.state.count);
-      this.putDataToAPI();
+      // this.putDataToAPI();
       this.showNotif(this.state.count);
     }, 0);
   }
@@ -124,6 +131,9 @@ Anda adalah seorang ${this.role}`);
       this.handlePress();
     });
     window.addEventListener('keyup', this.handleRelease);
+    setInterval(() => {
+      this.putDataToAPI();
+    }, 60000);
   }
   
   render () {
