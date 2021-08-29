@@ -79,7 +79,6 @@ Anda adalah seorang ${this.role}`);
     }
   }
   
-  
   putDataToAPI = () => {
     axios.patch(`${process.env.REACT_APP_API_GET}${this.state.userProv}`, {
       score: this.state.tempCount
@@ -133,7 +132,7 @@ Anda adalah seorang ${this.role}`);
     window.addEventListener('keyup', this.handleRelease);
     setInterval(() => {
       this.putDataToAPI();
-    }, 60000);
+    }, 10000);
   }
   
   render () {

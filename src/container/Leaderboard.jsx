@@ -81,18 +81,16 @@ class Leaderboard extends Component {
   }
   
   componentDidMount(){
-    this.getStatAPI();
-    this.getUserProvScore(this.state.userProv);
     setInterval(() => {
       this.getStatAPI();
       this.getUserProvScore(this.state.userProv);
-    }, 5000)
+    }, 2500)
   }
   
   render () {
     return (
       <Fragment>
-        <button className="btn btn-light btn-lg col-12 col-md-6 fixed-bottom unevent px-3 py-2 btnLeaderboard mx-auto" type="button" onClick={this.getStatAPI} data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+        <button className="btn btn-light btn-lg col-12 col-md-6 fixed-bottom unevent px-3 py-2 btnLeaderboard mx-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
           <div className="row unevent" style={{fontSize: '.7rem', marginTop : '1.5px'}}>
             <div className="col-1 float-start unevent mt-2">🏆</div>
             <div className="col v-divider unevent" style={{marginTop : '1px'}}>#1 <img className='unevent mt-2' src={this.state.max.flag} height='15' style={{margin:'0 2px', marginBottom : '10.5px'}} alt=''/> {this.convertToInternationalCurrencySystem(this.state.max.score)}</div>
