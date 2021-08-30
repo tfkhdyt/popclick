@@ -98,9 +98,13 @@ Anda adalah seorang ${this.role}`);
       this.playAudio();
       this.popOut();
       this.setState({
-        count: this.state.count + 1,
-        tempCount: this.state.tempCount + 1
+        count: this.state.count + 1
       });
+      if(this.state.tempCount <= 73){
+        this.setState({
+          tempCount: this.state.tempCount + 1
+        });
+      }
       this.setCookies(this.state.count);
       // this.putDataToAPI();
       this.showNotif(this.state.count);
