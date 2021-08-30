@@ -125,11 +125,11 @@ Anda adalah seorang ${this.role}`);
       }
     });
     window.addEventListener('mouseup', this.handleRelease);
-    window.addEventListener('keydown', (e) => {
-      if (e.repeat) { return }
-      this.handlePress();
-    });
-    window.addEventListener('keyup', this.handleRelease);
+    // window.addEventListener('keydown', (e) => {
+    //   if (e.repeat) { return }
+    //   this.handlePress();
+    // });
+    // window.addEventListener('keyup', this.handleRelease);
     setInterval(() => {
       this.putDataToAPI();
     }, 10000);

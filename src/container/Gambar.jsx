@@ -39,11 +39,11 @@ class Gambar extends Component {
       }
     });
     window.addEventListener('mouseup', this.handleRelease);
-    window.addEventListener('keydown', (e) => {
-      if (e.repeat) { return }
-      this.handlePress();
-    });
-    window.addEventListener('keyup', this.handleRelease);
+    // window.addEventListener('keydown', (e) => {
+    //   if (e.repeat) { return }
+    //   this.handlePress();
+    // });
+    // window.addEventListener('keyup', this.handleRelease);
   }
 
   render(){
