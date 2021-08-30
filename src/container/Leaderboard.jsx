@@ -118,11 +118,11 @@ class Leaderboard extends Component {
                 <Team />
               </div>
             </div>
-            <div className='row mx-auto fw-lighter mt-2'>
-              <div className="col-12">
+            <div className='row mx-auto fw-lighter mt-2 unevent'>
+              <div className="col-12 unevent">
                 Kalau Leaderboardnya gak muncul berarti servernya meninggal
               </div>
-              <div className="col-12">
+              <div className="col-12 unevent">
                 Provinsi yang ketauan curang/memiliki score yang gak masuk akal. Scorenya akan dikurangi 75%!
               </div>
             </div>
