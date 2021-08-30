@@ -6,7 +6,7 @@ import Provinsi from '../component/Provinsi';
 import Indonesia from '../component/Indonesia';
 import Team from '../container/Team';
 import Donate from '../component/Donate';
-import Bug from '../component/Bug';
+// import Bug from '../component/Bug';
 
 const cookies = new Cookies();
 
@@ -114,7 +114,7 @@ class Leaderboard extends Component {
             <div className='row mx-auto'>
               <div className='col'>
                 <Donate />
-                <Bug />
+                {/*<Bug />*/}
                 <Team />
               </div>
             </div>
