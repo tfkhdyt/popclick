@@ -123,7 +123,7 @@ class Leaderboard extends Component {
                 Kalau Leaderboardnya gak muncul berarti servernya meninggal
               </div>
               <div className="col-12 unevent">
-                Provinsi yang ketauan curang/memiliki score yang gak masuk akal. Scorenya akan dikurangi 75%!
+                Provinsi yang ketauan curang/memiliki score yang gak masuk akal. Scorenya akan dikurangi!
               </div>
             </div>
           </div>
