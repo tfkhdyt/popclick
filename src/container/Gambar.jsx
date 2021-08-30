@@ -28,7 +28,7 @@ class Gambar extends Component {
   
   componentDidMount(){
     window.addEventListener('touchstart', (e) => {
-      if (!e.target.classList.contains('unevent') && !e.target.classList.contains('swal2-timer-progress-bar-container')) {
+      if (!e.target.classList.contains('unevent') && !e.target.classList.contains('swal2-timer-progress-bar-container') && e.touches.length <= 1) {
         this.handlePress();
       }
     });

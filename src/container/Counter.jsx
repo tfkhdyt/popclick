@@ -118,7 +118,7 @@ Anda adalah seorang ${this.role}`);
   componentDidMount(){
     // console.log('Jangan ciduk saya pak. Saya sedang belajar React.js, berhubung popcat.click sedang ngetren saat ini, ya sudah saya buat saja versi clonenya. Saya bukan bermaksud untuk makar 🙏🏼, saya saat pilpres saja memilih Pak Jokowi kok, hehe');
     window.addEventListener('touchstart', (e) => {
-      if (!e.target.classList.contains('unevent') && !e.target.classList.contains('swal2-timer-progress-bar-container')) {
+      if (!e.target.classList.contains('unevent') && !e.target.classList.contains('swal2-timer-progress-bar-container') && e.touches.length <= 1) {
         this.handlePress();
       }
     });
