@@ -1,13 +1,15 @@
-# POPOWI
+## POPOWI
 [Popcat.click](https://popcat.click) clone dengan MERN Stack
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/dc81e134-84b3-42e3-8ad1-203686fae812/deploy-status)](https://app.netlify.com/sites/popowi/deploys)
 
-# Peringatan
+# KALAU SERVER NGEDOWN, GAK USAH BIKIN ISSUE. ITU BUKAN BUG, NANTI JUGA SERVERNYA HIDUP SENDIRI. DONATE BIAR SAYA BISA UPGRADE SERVER & DATABASE
+
+## Peringatan
 - Apabila leaderboard tidak muncul, kemungkinan servernya overload.
 - Provinsi yang memiliki score tidak masuk akal/ketahuan curang, scorenya akan dikurangi!
 
-# Donate
+## Donate
 Klik tombol di bawah untuk mendukung saya lewat donasi
 
 <p align="center">
