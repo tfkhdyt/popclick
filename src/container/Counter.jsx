@@ -134,9 +134,9 @@ Anda adalah seorang ${this.role}`);
     //   this.handlePress();
     // });
     // window.addEventListener('keyup', this.handleRelease);
-    setInterval(() => {
+    /*setInterval(() => {
       this.putDataToAPI();
-    }, 10000);
+    }, 10000);*/
   }
   
   render () {
