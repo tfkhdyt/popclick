@@ -1,5 +1,5 @@
 ## POPOWI
-[Popcat.click](https://popcat.click) clone dengan MERN Stack
+[Popcat.click](https://popcat.click) clone dengan Jokowi sebagai karakter
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/dc81e134-84b3-42e3-8ad1-203686fae812/deploy-status)](https://app.netlify.com/sites/popowi/deploys)
 
